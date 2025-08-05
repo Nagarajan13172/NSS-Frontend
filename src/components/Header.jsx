@@ -76,7 +76,7 @@ function Header() {
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
-              className="text-3xl lg:text-4xl font-inter font-extrabold text-white tracking-tight"
+              className="text-xl lg:text-2xl font-inter font-extrabold text-white tracking-tight"
             >
               Periyar University
             </motion.h1>
@@ -84,7 +84,7 @@ function Header() {
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
-              className="text-base lg:text-xl font-poppins font-medium text-emerald-100 leading-tight"
+              className="text-base lg:text-xs font-poppins font-medium text-emerald-100 leading-tight"
             >
               NAAC 'A++' Grade | NIRF Rank 56
             </motion.p>
@@ -92,7 +92,7 @@ function Header() {
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
-              className="text-base lg:text-xl font-poppins font-medium text-emerald-100"
+              className="text-base lg:text-xs font-poppins font-medium text-emerald-100"
             >
               Salem-636011, Tamil Nadu
             </motion.p>

@@ -39,6 +39,9 @@ export default function RegistrationForm() {
     unit_number: '',
     principal_name: '',
     principal_mobile: '',
+    programme_mobile: '',
+    programme_email: '',
+    programme_name: ''
   });
   const [excelFile, setExcelFile] = useState(null);
   const [errors, setErrors] = useState({});
@@ -168,7 +171,7 @@ export default function RegistrationForm() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gradient-to-b from-emerald-200 to-teal-200 relative overflow-hidden pt-32 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gradient-to-b from-emerald-200 to-teal-200 relative overflow-hidden pt-10  pb-12 px-4 sm:px-6 lg:px-8">
         <style>
           {`
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -418,6 +421,66 @@ export default function RegistrationForm() {
                   required
                 />
                 {errors.principal_mobile && <p className="text-red-600 text-sm mt-1">{errors.principal_mobile}</p>}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.05 }}
+              >
+                <label className="block text-gray-800 font-semibold mb-2 flex items-center gap-3 text-lg font-poppins">
+                  Programme Name
+                </label>
+                <input
+                  type="text"
+                  name="programme_name"
+                  value={formData.programme_name || ''}
+                  onChange={handleChange}
+                  className="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-4 focus:ring-emerald-500/75 transition-all duration-300 font-poppins text-gray-800 text-lg placeholder-gray-400"
+                  placeholder="Enter programme name"
+                  required
+                />
+                {errors.programme_name && <p className="text-red-600 text-sm mt-1">{errors.programme_name}</p>}
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.06 }}
+              >
+                <label className="block text-gray-800 font-semibold mb-2 flex items-center gap-3 text-lg font-poppins">
+                  Programme Email
+                </label>
+                <input
+                  type="email"
+                  name="programme_email"
+                  value={formData.programme_email || ''}
+                  onChange={handleChange}
+                  className="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-4 focus:ring-emerald-500/75 transition-all duration-300 font-poppins text-gray-800 text-lg placeholder-gray-400"
+                  placeholder="Enter programme email"
+                  required
+                />
+                {errors.programme_email && <p className="text-red-600 text-sm mt-1">{errors.programme_email}</p>}
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.07 }}
+              >
+                <label className="block text-gray-800 font-semibold mb-2 flex items-center gap-3 text-lg font-poppins">
+                  Programme Mobile
+                </label>
+                <input
+                  type="tel"
+                  name="programme_mobile"
+                  value={formData.programme_mobile || ''}
+                  onChange={handleChange}
+                  maxLength={10}
+                  className="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-4 focus:ring-emerald-500/75 transition-all duration-300 font-poppins text-gray-800 text-lg placeholder-gray-400"
+                  placeholder="Enter programme mobile"
+                  pattern="[0-9]{10}"
+                  required
+                />
+                {errors.programme_mobile && <p className="text-red-600 text-sm mt-1">{errors.programme_mobile}</p>}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
